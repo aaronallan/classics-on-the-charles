@@ -44,6 +44,7 @@
 	<!-- concatenate and minify for production -->
 	<link rel="stylesheet" href="assets/css/reset.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
 	
 	<!-- Lea Verou's Prefix Free, lets you use un-prefixed properties in your CSS files -->
 	<script src="assets/js/libs/prefixfree.min.js"></script>
@@ -80,54 +81,111 @@
 <div class="wrapper"><!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
 
 	<header>
-		
-		<h1><a href="/">Page Title</a></h1>
-		
-		<nav>
-		
-			<ol>
-				<li><a href="">Nav Link 1</a></li>
-				<li><a href="">Nav Link 2</a></li>
-				<li><a href="">Nav Link 3</a></li>
-			</ol>
-		
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		  <!-- Indicators -->
+		  <ol class="carousel-indicators">
+		    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+		    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+		    <!-- <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
+		  </ol>
+
+		  <!-- Wrapper for slides -->
+		  <div class="carousel-inner" role="listbox">
+		  	<div class="item active">
+		      <img src="assets/images/School-of-athens.jpg" alt="Charles River">
+		    </div>
+		    <div class="item">
+		      <img src="assets/images/classroom.jpg" alt="School of Athens">
+		    </div>
+		  </div>
+
+		  <!-- Controls -->
+		  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    <span class="sr-only">Previous</span>
+		  </a>
+		  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+		    <span class="sr-only">Next</span>
+		  </a>
+		</div>
+
+		<nav>		
+			<ul>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="index.html">Home</a></li>
+			</ul>
 		</nav>
 	
 	</header>
-	
-	<article>
+
+		<aside class="col-30">
 		
-		<h1>Article Header</h1>
+
+			<h4>Upcoming Events:</h4>
+			<div class="event-component">
+				<div class="top">
+					No upcoming Events
+				</div>
+				<div class="bottom">
+					<p>No upcoming Events</p>
+				</div>
+			</div>
+
+			<h4>Past Events:</h4>
+
+			<div class="event-component">
+				<div class="top">
+					March 11th, 2014
+				</div>
+				<div class="bottom">
+					<a href="http://www.hbsab.org/article.html?aid=821" target="_blank">
+						Harvard Business School</br>
+						Hawes 101 </br>
+						60 Harvard Way</br> 
+						Boston, MA 02163
+					</a>
+				</div>
+			</div>
+
 		
-		<p>Etiam pretium odio eu mi convallis vitae varius neque pharetra. Nulla vestibulum nisi ut sem cursus sed mattis nisi egestas.</p>
-		
-		<h2>Article Subhead</h2>
-		
-		<p>Vestibulum lacus erat, volutpat vel dignissim at, fringilla ut felis.</p>
-	
-	</article>
-	
-	<aside>
-	
-		<h2>Sidebar Content</h2>
-	
-	</aside>
-	
+		</aside>
+
+		<article class="col-70 last">
+			
+			<h4><strong>Classics on the Charles</strong> offers Socratic Seminars on:</h4>
+			
+			<ul>
+				<li class="vertical">The Business of Life: Tackling the Big Questions through Great Literature.</li>
+				<li class="vertical">In order to find practical ideas about the art of living, about how we, today, can live better, richer, more fulfilling lives — ideas across love, work, family, time, money, death, creativity, and more.</li>
+			</ul>
+			
+			<!-- <img src="./assets/images/charles.jpg" alt="charles-river" class="welcome"> -->
+		</article>		
+
 	<footer>
 		
-		<p><small>&copy; Copyright Your Name Here 2014. All Rights Reserved.</small></p>
+		<p><small>&copy; Copyright Classics On The Charles <span id="year"></span>. All Rights Reserved.</small></p>
 		
 	</footer>
 
 </div>
 
 <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script>window.jQuery || document.write("<script src='assets/js/libs/jquery-1.11.0.min.js'>\x3C/script>")</script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
 <!-- this is where we put our custom functions -->
 <!-- don't forget to concatenate and minify if needed -->
 <script src="assets/js/functions.js"></script>
+<script>
+// Load this when the DOM is ready
+$(function(){
+  $('.carousel').carousel();
+});
+</script>
 
 <!-- Asynchronous google analytics; this is the official snippet.
 	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
