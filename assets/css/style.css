@@ -11,10 +11,10 @@ a:hover {color: #3B6670;}
 
 /* Custom text-selection colors (remove any text shadows: http://twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
-::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+::selection {background: #fcd700; color: #fff; text-shadow: none;}
 
 /*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #fcd700;} 
+a:link {-webkit-tap-highlight-color: #fcd700;}
 
 ins {background-color: #fcd700; color: #000; text-decoration: none;}
 mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
@@ -59,7 +59,8 @@ li.vertical {
   background: #fafafa;
 }
 .col-30,
-.col-70 {
+.col-70,
+.col-100 {
   float: left;
   width: 100%;
   padding: 2em 1em;
@@ -79,7 +80,7 @@ li.vertical {
     width: 30%;
     margin-right: 3%;
   }
-  
+
   .col-70 {
     width: 67%;
     margin-right: 3%;
@@ -105,7 +106,7 @@ li.vertical {
   width: 100%;
   border: solid 3px #3B6670;
 }
-.event-component .top, 
+.event-component .top,
 .event-component .bottom {
   margin: 0;
   padding: 1em;
@@ -147,7 +148,6 @@ ul {
 footer {
   overflow: hidden;
   float: left;
-  /*position: absolute;*/
   bottom: 0;
   left: 0;
   width: 100%;
@@ -178,8 +178,8 @@ p, li.vertical {
 -------------------------------------------------------------------------------*/
 
 @media screen and (max-width: 480px) {
-	
-		
+
+
 }
 
 
